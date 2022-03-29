@@ -1,0 +1,17 @@
+{
+  "navigator": {
+    "login" : "Logowanie",
+    "users": "Użytkownicy",
+    "kids": "Dzieciaki",
+    "back": "Powrót",
+    "add": "Dodaj"
+  },
+  "list": {
+    "users": {
+      "header": "Lista użytkowników:",
+      "first_name": "Imię",
+      "last_name": "Nazwisko",
+      "date_of_birth": "Data urodzenia"
+    }
+  }
+}

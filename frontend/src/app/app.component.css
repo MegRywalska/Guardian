@@ -1,0 +1,7 @@
+.app-content{
+  background-color: rgba(17, 255, 0, 0.15);
+  margin-top:4em;
+  width: 50%;
+  min-width: 720px;
+  padding: 4px 8px 4px 9px;
+}

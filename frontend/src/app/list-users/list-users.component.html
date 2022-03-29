@@ -1,0 +1,36 @@
+<div class="d-flex flex-column">
+  <div class="d-flex flex-row w-100">
+    <div class="d-flex flex-row w-100">
+      <a [routerLink]="['/home']">
+        <button class="btn btn-secondary" [translate]="'navigator.link.back'"></button>
+      </a>
+    </div>
+    <div class="d-flex flex-row-reverse">
+      <a [routerLink]="['form']">
+        <button class="btn btn-secondary" [translate]="'navigator.link.add'"></button>
+      </a>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="page-header" [translate]="'list.users.header'"></div>
+  <div class="page-content">
+    <div class="table">
+      <div class="header">
+        <div class="header-column col-md-1" [translate]="'list.users.id'"></div>
+        <div class="header-column col-md-2" [translate]="'list.users.first_name'"></div>
+        <div class="header-column col-md-2" [translate]="'list.users.last_name'"></div>
+        <div class="header-column col-md-2" [translate]="'list.users.date_of_birth'"></div>
+        <div class="header-column col-md-2 clr"></div>
+      </div>
+      <div class="item-row" *ngFor="let user of users">
+        <div class="item-column col-md-1">{{ user.identifier }}</div>
+        <div class="item-column col-md-2">{{ user.name }}</div>
+        <div class="item-column col-md-2">{{ user.surname }}</div>
+        <div class="item-column col-md-2">{{ user.dateOfBirth }}</div>
+        <div class="item-column col-md-2 clr">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

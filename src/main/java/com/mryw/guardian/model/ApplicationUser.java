@@ -29,7 +29,7 @@ public class ApplicationUser implements UserDetails {
     private LocalDate dateOfBirth;
 
     // Użytkownik ma role: Admin, User, Kid
-    @OneToMany
+    @OneToMany(fetch= FetchType.EAGER)
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     private Set<ApplicationUserRole> roles;

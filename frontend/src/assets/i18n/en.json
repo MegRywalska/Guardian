@@ -1,0 +1,17 @@
+{
+  "navigator": {
+    "login" : "Login",
+    "users": "Users",
+    "kids": "Kids",
+    "back": "Back",
+    "add": "Add new"
+  },
+  "list": {
+    "users": {
+      "header": "User list:",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "date_of_birth": "Date of birth"
+    }
+  }
+}

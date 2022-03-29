@@ -1,0 +1,50 @@
+.navigator{
+  /*background-color: #000088;*/
+  height: 3em;
+  position: absolute;
+  top:2px;
+  left: 2px;
+  right:2px;
+}
+
+.navigator-bar{
+  background-color: rgba(0, 138, 255, 0.18);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 50%;
+  min-width: 720px;
+  margin: auto;
+  padding:5px;
+}
+.logo-span{
+  text-align: center;
+  margin: auto;
+}
+
+.navigator-bar-logo{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  /*background-color: #00ff00;*/
+}
+.logo{
+  height: inherit;
+}
+.navigation-bar-buttons-stretch{
+  width: 100%;
+  height: 100%;
+}
+
+.navigator-bar-buttons{
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.example-button{
+  margin: 0 1px 0 1px;
+  padding: 0 3px 0 3px;
+  /*background-color: #ffff00;*/
+}

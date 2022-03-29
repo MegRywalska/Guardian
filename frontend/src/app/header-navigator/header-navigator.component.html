@@ -1,0 +1,27 @@
+<div class="navigator">
+  <div class="navigator-bar">
+    <div class="navigator-bar-logo">
+      <img class="logo" src="../../assets/logo.png">
+      <span class="logo-span">Guardians</span>
+    </div>
+    <div class="navigation-bar-buttons-stretch">
+      <div class="navigator-bar-buttons">
+        <div class="d-flex flex-column m-lr-5">
+          <div *ngFor="let locale of locales">
+            <img class="m-lr-5" src="../assets/img/k-{{locale.localeCode}}.png" width="30px" (click)="useLanguage(locale.localeCode )"/>
+          </div>
+        </div>
+        <div class="example-button" [translate]="'navigator.login'">
+          Login
+        </div>
+        <div class="example-button" >
+          <a [translate]="'navigator.user'" [routerLink]="['users']" ></a>
+          Users
+        </div>
+        <div class="example-button" [translate]="'navigator.kid'" >
+          Kids
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,7 @@
 package com.mryw.guardian.configuration;
 
+import com.mryw.guardian.configuration.filters.JWTAuthenticationFilter;
+import com.mryw.guardian.configuration.filters.JWTAuthorizationFilter;
 import com.mryw.guardian.service.ApplicationUserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -29,12 +31,12 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
-//                .antMatchers("/login").permitAll()
-//                .antMatchers("/user/register").permitAll()
-                .anyRequest().permitAll()
+                .antMatchers("/login").permitAll()
+                .antMatchers("/user/register").permitAll()
+                .anyRequest().authenticated()
                 .and()
-//                .addFilter(new JWTAuthenticationFilter(authenticationManager(), applicationUserService))
-//                .addFilter(new JWTAuthorizationFilter(authenticationManager()))
+                .addFilter(new JWTAuthenticationFilter(authenticationManager(), applicationUserService))
+                .addFilter(new JWTAuthorizationFilter(authenticationManager()))
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 

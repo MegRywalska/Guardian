@@ -13,10 +13,10 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class UserController {
 
-private UsersService usersService;
+    private final UsersService usersService;
 
     @GetMapping
     public List<ApplicationUserDto> get(){

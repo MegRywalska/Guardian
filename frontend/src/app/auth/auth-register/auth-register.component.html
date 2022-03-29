@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title>Registration form</mat-card-title>
+  <mat-card-content>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Username"
+             [(ngModel)]="registrationDto.username">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="password" matInput placeholder="Password"
+             [(ngModel)]="registrationDto.password">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="password" matInput placeholder="Name"
+             [(ngModel)]="registrationDto.firstname">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="password" matInput placeholder="Surname"
+             [(ngModel)]="registrationDto.lastname">
+    </mat-form-field>
+
+    <p *ngIf="error" class="error">
+      {{ error }}
+    </p>
+
+    <div class="button">
+      <button type="submit" mat-button (click)="send()">Register</button>
+    </div>
+
+  </mat-card-content>
+</mat-card>
